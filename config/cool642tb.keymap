@@ -9,7 +9,7 @@
 #define NUM_LAYER 3
 #define BLUETOOTH_LAYER 4 
 #define SCROLL_LAYER 5
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 60 // スクロール量
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 120 // スクロール量
 
 &mt {
     flavor = "balanced";
@@ -67,7 +67,7 @@
             label = "ENCODER_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = <40>;
+            tap-ms = <60>;
         };
         // lt_to_layer_0: lt_to_layer_0 {
         //     compatible = "zmk,behavior-hold-tap";
