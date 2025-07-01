@@ -83,6 +83,27 @@
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
             tap-ms = <10>;  // より短いtap-ms
         };
+        scroll_up_macro: scroll_up_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&msc SCRL_UP>;
+            label = "SCROLL_UP_MACRO";
+        };
+
+        scroll_down_macro: scroll_down_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>;
+            label = "SCROLL_DOWN_MACRO";
+        };
+
+        macro_scroll: macro_scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "MACRO_SCROLL";
+            #sensor-binding-cells = <0>;
+            bindings = <&scroll_up_macro>, <&scroll_down_macro>;
+            tap-ms = <10>;
+        };
         
         // 可変スクロール（よりシンプルに）
         mouse_scrl: mouse_scrl {
@@ -121,6 +142,7 @@
             // sensor-bindings = <&encoder_msc_down_up>;
             // sensor-bindings = <&mouse_mv MOVE_LEFT MOVE_RIGHT>;
             sensor-bindings = <&inc_dec_kp UP DOWN>;
+            sensor-bindings = <&macro_scroll>;
         };
 
         SYMBOL_LAYER {
