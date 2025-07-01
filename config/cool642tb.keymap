@@ -68,6 +68,13 @@
 
 / {
     behaviors {
+        encoder_msc_down_up: encoder_msc_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms = <20>;
+        };
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_DOWN_UP";
@@ -111,7 +118,8 @@
             // sensor-bindings = <&scroll_up_down>;
             // sensor-bindings = <&rot_kp PAGE_UP PAGE_DOWN>;
             // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
-            sensor-bindings = <&rot_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            // sensor-bindings = <&rot_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         SYMBOL_LAYER {
