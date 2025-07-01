@@ -9,7 +9,7 @@
 #define NUM_LAYER 3
 #define BLUETOOTH_LAYER 4 
 #define SCROLL_LAYER 5
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 120 // スクロール量
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20 // スクロール量
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 800
 
 &mt {
@@ -18,10 +18,10 @@
     tapping-term-ms = <150>; 
 };
 &msc {
-    delay-ms = <0>;
-    trigger-period-ms = <10>;
-    time-to-max-speed-ms = <0>;
-    acceleration-exponent = <0>;
+    delay-ms = <10>;
+    trigger-period-ms = <30>;
+    time-to-max-speed-ms = <500>;
+    acceleration-exponent = <2>;
 };
 &mmv {
     delay-ms = <0>;
@@ -75,37 +75,11 @@
 
 / {
     behaviors {
-        encoder_msc_down_up: encoder_msc_down_up {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_MSC_DOWN_UP";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = <20>;
-        };
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_DOWN_UP";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            // bindings = <&kp K_SCROLL_DOWN>, <&kp K_SCROLL_UP>;
-            tap-ms = <30>;
-        };
-        rot_kp: sensor_rotate_kp {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
         mouse_scrl: mouse_wheel_scrl {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-            tap-ms = <10>;
-        };
-        mouse_mv: mouse_cursor_move {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&mmv>, <&mmv>;
-            tap-ms = <10>;
+            tap-ms = <30>;
         };
         // lt_to_layer_0: lt_to_layer_0 {
         //     compatible = "zmk,behavior-hold-tap";
@@ -175,7 +149,7 @@
 
         BLUETOOTH_LAYER {
             bindings = <
-&none  &none  &none  &none  &none                         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
+&none  &none  &none  &msc SCRL_DOWN  &msc SCRL_UP                         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
 &none  &none  &none  &none  &none  &none  &bt BT_CLR      &none          &bt BT_PRV     &bt BT_NXT     &none          &none
 &none  &none  &none  &none  &none  &none  &bt BT_CLR_ALL  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
 &none  &none  &none  &none  &none  &none  &none           &none                                                       &none
