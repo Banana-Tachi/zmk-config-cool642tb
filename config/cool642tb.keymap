@@ -121,6 +121,7 @@
 
             // sensor-bindings = <&scroll_up_down>;
             sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            // sensor-bindings = <&mouse_scrl SCRL_LEFT SCRL_RIGHT>;
         };
 
         MOUSE_LAYER {
@@ -132,7 +133,8 @@
             >;
 
             // sensor-bindings = <&scroll_up_down>;
-            sensor-bindings = <&rot_kp PAGE_UP PAGE_DOWN>;
+            // sensor-bindings = <&rot_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
         };
 
         NUM_LAYER {
@@ -143,8 +145,9 @@
 &kp LEFT_GUI  &kp LEFT_ALT  &mt LS(LEFT_CONTROL) ESC  &lt 1 LC(SPACE)  &lt 3 SPACE  &lt 2 TAB  &kp ENTER  &kp BACKSPACE                                      &kp F11
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            // sensor-bindings = <&scroll_up_down>;
             // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
         };
 
         BLUETOOTH_LAYER {
@@ -155,7 +158,8 @@
 &none  &none  &none  &none  &none  &none  &none           &none                                                       &none
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            // sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
         };
 
         SCROLL_LAYER {
@@ -166,7 +170,8 @@
 &kp LEFT_GUI      &kp LEFT_ALT     &mt LS(LEFT_CONTROL) ESC  &lt 1 LC(SPACE)       &lt 3 SPACE       &lt 2 TAB  &kp ENTER   &kp BACKSPACE                                                     &none
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            // sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
         };
 
         layer_6 {
