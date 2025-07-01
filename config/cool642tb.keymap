@@ -141,8 +141,8 @@
             // sensor-bindings = <&rot_kp K_SCROLL_UP K_SCROLL_DOWN>;
             // sensor-bindings = <&encoder_msc_down_up>;
             // sensor-bindings = <&mouse_mv MOVE_LEFT MOVE_RIGHT>;
-            // sensor-bindings = <&inc_dec_kp UP DOWN>;
-            sensor-bindings = <&macro_scroll>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
+            // sensor-bindings = <&macro_scroll>;
         };
 
         SYMBOL_LAYER {
@@ -155,7 +155,8 @@
 
             // sensor-bindings = <&scroll_up_down>;
             // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
-            sensor-bindings = <&inc_dec_kp A B>;
+            // sensor-bindings = <&inc_dec_kp A B>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
             // sensor-bindings = <&mouse_scrl SCRL_LEFT SCRL_RIGHT>;
         };
 
@@ -169,7 +170,8 @@
 
             // sensor-bindings = <&scroll_up_down>;
             // sensor-bindings = <&rot_kp PAGE_UP PAGE_DOWN>;
-            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         NUM_LAYER {
@@ -182,7 +184,8 @@
 
             // sensor-bindings = <&scroll_up_down>;
             // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
-            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         BLUETOOTH_LAYER {
@@ -194,7 +197,8 @@
             >;
 
             // sensor-bindings = <&scroll_up_down>;
-            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         SCROLL_LAYER {
@@ -206,7 +210,8 @@
             >;
 
             // sensor-bindings = <&scroll_up_down>;
-            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         layer_6 {
