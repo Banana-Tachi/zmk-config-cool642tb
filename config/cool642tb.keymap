@@ -74,7 +74,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
             // bindings = <&kp K_SCROLL_DOWN>, <&kp K_SCROLL_UP>;
-            tap-ms = <20>;
+            tap-ms = <30>;
         };
         rot_kp: sensor_rotate_kp {
             compatible = "zmk,behavior-sensor-rotate-var";
@@ -85,7 +85,7 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-            tap-ms = <20>;
+            tap-ms = <30>;
         };
         // lt_to_layer_0: lt_to_layer_0 {
         //     compatible = "zmk,behavior-hold-tap";
@@ -110,7 +110,8 @@
 
             // sensor-bindings = <&scroll_up_down>;
             // sensor-bindings = <&rot_kp PAGE_UP PAGE_DOWN>;
-            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&rot_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         SYMBOL_LAYER {
@@ -121,7 +122,8 @@
 &kp LEFT_GUI  &kp LEFT_ALT       &mt LS(LEFT_CONTROL) ESCAPE  &lt 1 LC(SPACE)  &lt 3 SPACE  &lt 2 TAB  &kp ENTER  &kp BACKSPACE                                                    &kp BACKSLASH
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            // sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
         };
 
         MOUSE_LAYER {
@@ -144,8 +146,8 @@
 &kp LEFT_GUI  &kp LEFT_ALT  &mt LS(LEFT_CONTROL) ESC  &lt 1 LC(SPACE)  &lt 3 SPACE  &lt 2 TAB  &kp ENTER  &kp BACKSPACE                                      &kp F11
             >;
 
-            // sensor-bindings = <&scroll_up_down>;
-            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
+            // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
         };
 
         BLUETOOTH_LAYER {
