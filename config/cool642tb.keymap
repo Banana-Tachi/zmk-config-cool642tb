@@ -91,13 +91,6 @@
             bindings = <&msc>, <&msc>;
             tap-ms = <10>;  // より短いtap-ms
         };
-        simple_encoder_scroll: simple_encoder_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "SIMPLE_ENCODER_SCROLL";
-            #sensor-binding-cells = <0>;
-            bindings = <&inc_dec_kp UP DOWN>;  // まずキーコードで確認
-            tap-ms = <20>;
-        };
         // lt_to_layer_0: lt_to_layer_0 {
         //     compatible = "zmk,behavior-hold-tap";
         //     label = "LAYER_TAP_TO_0";
@@ -123,8 +116,7 @@
             // sensor-bindings = <&rot_kp PAGE_UP PAGE_DOWN>;
             // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
             // sensor-bindings = <&mouse_scrl SCRL_LEFT SCRL_RIGHT>;
-            // sensor-bindings = <&quick_scroll>;
-            sensor-bindings = <&simple_encoder_scroll>;
+            sensor-bindings = <&quick_scroll>;
             // sensor-bindings = <&rot_kp K_SCROLL_UP K_SCROLL_DOWN>;
             // sensor-bindings = <&encoder_msc_down_up>;
             // sensor-bindings = <&mouse_mv MOVE_LEFT MOVE_RIGHT>;
