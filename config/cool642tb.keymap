@@ -10,6 +10,7 @@
 #define BLUETOOTH_LAYER 4 
 #define SCROLL_LAYER 5
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 120 // スクロール量
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 800
 
 &mt {
     flavor = "balanced";
@@ -21,6 +22,12 @@
     trigger-period-ms = <10>;
     time-to-max-speed-ms = <0>;
     acceleration-exponent = <0>;
+};
+&mmv {
+    delay-ms = <0>;
+    trigger-period-ms = <10>;
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <1>;
 };
 
 // / {
@@ -94,6 +101,12 @@
             bindings = <&msc>, <&msc>;
             tap-ms = <30>;
         };
+        mouse_mv: mouse_cursor_move {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&mmv>, <&mmv>;
+            tap-ms = <10>;
+        };
         // lt_to_layer_0: lt_to_layer_0 {
         //     compatible = "zmk,behavior-hold-tap";
         //     label = "LAYER_TAP_TO_0";
@@ -117,9 +130,10 @@
 
             // sensor-bindings = <&scroll_up_down>;
             // sensor-bindings = <&rot_kp PAGE_UP PAGE_DOWN>;
-            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
             // sensor-bindings = <&rot_kp K_SCROLL_UP K_SCROLL_DOWN>;
             // sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&mouse_mv MOVE_LEFT MOVE_RIGHT>;
         };
 
         SYMBOL_LAYER {
