@@ -99,7 +99,7 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-            tap-ms = <30>;
+            tap-ms = <10>;
         };
         mouse_mv: mouse_cursor_move {
             compatible = "zmk,behavior-sensor-rotate-var";
@@ -131,9 +131,10 @@
             // sensor-bindings = <&scroll_up_down>;
             // sensor-bindings = <&rot_kp PAGE_UP PAGE_DOWN>;
             // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&mouse_scrl SCRL_LEFT SCRL_RIGHT>;
             // sensor-bindings = <&rot_kp K_SCROLL_UP K_SCROLL_DOWN>;
             // sensor-bindings = <&encoder_msc_down_up>;
-            sensor-bindings = <&mouse_mv MOVE_LEFT MOVE_RIGHT>;
+            // sensor-bindings = <&mouse_mv MOVE_LEFT MOVE_RIGHT>;
         };
 
         SYMBOL_LAYER {
