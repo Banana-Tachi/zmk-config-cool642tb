@@ -92,11 +92,12 @@
             tap-ms = <10>;  // より短いtap-ms
         };
         simple_encoder_scroll: simple_encoder_scroll {
-        compatible = "zmk,behavior-sensor-rotate";
-        label = "SIMPLE_ENCODER_SCROLL";
-        #sensor-binding-cells = <0>;
-        bindings = <&inc_dec_kp UP DOWN>;  // まずキーコードで確認
-        tap-ms = <20>;
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SIMPLE_ENCODER_SCROLL";
+            #sensor-binding-cells = <0>;
+            bindings = <&inc_dec_kp UP DOWN>;  // まずキーコードで確認
+            tap-ms = <20>;
+        };
     };
         // lt_to_layer_0: lt_to_layer_0 {
         //     compatible = "zmk,behavior-hold-tap";
