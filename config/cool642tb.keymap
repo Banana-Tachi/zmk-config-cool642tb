@@ -16,6 +16,12 @@
     quick-tap-ms = <0>;
     tapping-term-ms = <150>; 
 };
+&msc {
+    delay-ms = <0>;
+    trigger-period-ms = <10>;
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <0>;
+};
 
 // / {
     // /*
@@ -75,6 +81,12 @@
             #sensor-binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+        mouse_scrl: mouse_wheel_scrl {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+            tap-ms = <10>;
+        };
         // lt_to_layer_0: lt_to_layer_0 {
         //     compatible = "zmk,behavior-hold-tap";
         //     label = "LAYER_TAP_TO_0";
@@ -97,7 +109,8 @@
             >;
 
             // sensor-bindings = <&scroll_up_down>;
-            sensor-bindings = <&rot_kp PAGE_UP PAGE_DOWN>;
+            // sensor-bindings = <&rot_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
         };
 
         SYMBOL_LAYER {
