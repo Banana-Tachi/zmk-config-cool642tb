@@ -116,7 +116,7 @@
             // sensor-bindings = <&rot_kp PAGE_UP PAGE_DOWN>;
             // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
             // sensor-bindings = <&mouse_scrl SCRL_LEFT SCRL_RIGHT>;
-            sencor-bindings = <&quick_scroll>;
+            sensor-bindings = <&quick_scroll>;
             // sensor-bindings = <&rot_kp K_SCROLL_UP K_SCROLL_DOWN>;
             // sensor-bindings = <&encoder_msc_down_up>;
             // sensor-bindings = <&mouse_mv MOVE_LEFT MOVE_RIGHT>;
