@@ -117,9 +117,9 @@
 
             // sensor-bindings = <&scroll_up_down>;
             // sensor-bindings = <&rot_kp PAGE_UP PAGE_DOWN>;
-            // sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
             // sensor-bindings = <&rot_kp K_SCROLL_UP K_SCROLL_DOWN>;
-            sensor-bindings = <&encoder_msc_down_up>;
+            // sensor-bindings = <&encoder_msc_down_up>;
         };
 
         SYMBOL_LAYER {
