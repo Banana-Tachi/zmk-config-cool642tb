@@ -98,7 +98,6 @@
             bindings = <&inc_dec_kp UP DOWN>;  // まずキーコードで確認
             tap-ms = <20>;
         };
-    };
         // lt_to_layer_0: lt_to_layer_0 {
         //     compatible = "zmk,behavior-hold-tap";
         //     label = "LAYER_TAP_TO_0";
