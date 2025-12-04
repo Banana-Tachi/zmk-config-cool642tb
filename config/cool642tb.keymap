@@ -107,7 +107,8 @@
 &kp LEFT_GUI  &kp LEFT_ALT       &mt LS(LEFT_CONTROL) ESCAPE  &lt 1 LC(SPACE)  &lt 3 SPACE  &lt 2 TAB  &kp ENTER  &kp BACKSPACE                                                    &kp BACKSLASH
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            // sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         MOUSE_LAYER {
@@ -129,7 +130,8 @@
 &kp LEFT_GUI  &kp LEFT_ALT  &mt LS(LEFT_CONTROL) ESC  &lt 1 LC(SPACE)  &lt 3 SPACE  &lt 2 TAB  &kp ENTER  &kp BACKSPACE                                      &kp F11
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            // sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         BLUETOOTH_LAYER {
@@ -151,7 +153,8 @@
 &kp LEFT_GUI      &kp LEFT_ALT     &mt LS(LEFT_CONTROL) ESC  &lt 1 LC(SPACE)       &lt 3 SPACE       &lt 2 TAB  &kp ENTER   &kp BACKSPACE                                                     &none
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            // sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
         layer_6 {
