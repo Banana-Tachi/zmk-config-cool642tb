@@ -4,6 +4,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <behaviors/rgbled_widget.dtsi> // RGB LED widget behavior
+#include <dt-bindings/zmk/outputs.h> // OUT_TOG
 
 #define SYMBOL_LAYER 1
 #define MOUSE_LAYER 2
@@ -138,9 +139,9 @@
         BLUETOOTH_LAYER {
             bindings = <
 &none  &none  &none  &none  &none                         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
-&none  &none  &none  &none  &none  &none  &bt BT_CLR      &ind_con          &bt BT_PRV     &bt BT_NXT     &none          &none
+&none  &none  &none  &none  &none  &none  &bt BT_CLR      &ind_con       &bt BT_PRV     &bt BT_NXT     &out OUT_USB   &out OUT_BLE
 &none  &none  &none  &none  &none  &none  &bt BT_CLR_ALL  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
-&none  &none  &none  &none  &none  &none  &none           &none                                                       &none
+&none  &none  &none  &none  &none  &none  &out OUT_TOG    &out OUT_TOG                                                   &none
             >;
 
             // sensor-bindings = <&bt_switch>;
