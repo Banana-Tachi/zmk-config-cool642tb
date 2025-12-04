@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <behaviors/rgbled_widget.dtsi> // RGB LED widget behavior
 
 #define SYMBOL_LAYER 1
 #define MOUSE_LAYER 2
@@ -91,7 +92,7 @@
         default_layer {
             bindings = <
 &kp Q               &kp W         &kp E                        &kp R            &kp T                               &kp Y          &kp U  &kp I      &kp O       &kp P
-&mt LEFT_SHIFT A    &kp S         &lt 1 D                        &lt 2 F            &kp G        &mo 4      &none       &kp H          &kp J  &kp K      &kp L       &mt RIGHT_SHIFT MINUS
+&mt LEFT_SHIFT A    &kp S         &lt 1 D                        &lt 2 F            &kp G        &mo 4      &ind_bat       &kp H          &kp J  &kp K      &kp L       &mt RIGHT_SHIFT MINUS
 &mt LEFT_CONTROL Z  &kp X         &kp C                        &kp V            &kp B        &mo 3      &caps_word  &kp N          &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_CONTROL SLASH
 &kp LEFT_GUI        &kp LEFT_ALT  &mt LS(LEFT_CONTROL) ESCAPE  &lt 1 LC(SPACE)  &lt 3 SPACE  &lt 2 TAB  &kp ENTER   &kp BACKSPACE                                &lt 2 BACKSLASH
             >;
@@ -137,7 +138,7 @@
         BLUETOOTH_LAYER {
             bindings = <
 &none  &none  &none  &none  &none                         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
-&none  &none  &none  &none  &none  &none  &bt BT_CLR      &none          &bt BT_PRV     &bt BT_NXT     &none          &none
+&none  &none  &none  &none  &none  &none  &bt BT_CLR      &ind_con          &bt BT_PRV     &bt BT_NXT     &none          &none
 &none  &none  &none  &none  &none  &none  &bt BT_CLR_ALL  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
 &none  &none  &none  &none  &none  &none  &none           &none                                                       &none
             >;
