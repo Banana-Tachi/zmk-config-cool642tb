@@ -62,4 +62,8 @@
     };
 };
 
+// Battery ADC configuration
+&adc {
+    status = "okay";
+};
 

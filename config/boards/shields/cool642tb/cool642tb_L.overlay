@@ -14,3 +14,8 @@
 &left_encoder {
     status = "okay";
 };
+
+// Battery ADC configuration
+&adc {
+    status = "okay";
+};
